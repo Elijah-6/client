@@ -1,7 +1,11 @@
-const Home =()=> {
+import MainCarousel from "./MainCarousel";
+import ShoppingList from "./ShoppingList"
+
+const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className = "home">
+      <MainCarousel/>
+      <ShoppingList/>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { CssBaseline } from "@mui/material";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./states";
+import { theme } from "./theme";
 
 const store = configureStore({
   reducer: { cart: cartReducer },
@@ -16,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider>
+      <ThemeProvider theme  = {theme}>
         <CssBaseline />
         <App />
       </ThemeProvider>

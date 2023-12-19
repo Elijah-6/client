@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Badge, Box, IconButton } from "@mui`";
+import { Badge, Box, IconButton } from "@mui/material";
 import {
     PersonOutlined,
     ShoppingBagOutlined,
@@ -8,7 +8,7 @@ import {
 
 } from "@mui/icons-material";
 import {useNavigate } from "react-router-dom";
-import shades from "../../theme";
+import { shades } from "../../theme";
 import { setIsCartOpen } from "../../states";
 
 
@@ -27,7 +27,7 @@ const NavBar = () => {
           top = '0'
           left ='0'
           zIndex ='1'
-          position='fixed'
+          position='sticky'
           backgroundColor = 'rgba(255,255,255,0.95)'
 
       >
@@ -41,9 +41,9 @@ const NavBar = () => {
               <Box
                   onClick={() => navigate('/')}
                   sx={{ "&:hover": { cursor: "pointer" } }}
-                  color={shades.secondary[500]}
+                  color={shades.primary[400]}
               >
-                  Closet 405
+                  CLOSET 405
               </Box>
 
               <Box
@@ -52,6 +52,7 @@ const NavBar = () => {
                   columnGap = '20px'
                   zIndex ='2'
               >
+                  {/* Search Icon */}
                   <IconButton
                   sx ={{color :"black"}}
                   >
